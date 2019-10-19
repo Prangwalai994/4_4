@@ -27,7 +27,11 @@ namespace DemeritPointsCalculatorUnitTest4_4
         [TestCase(75, 2)]
         public void CalculateDemeritPoints_WhenCalled_ReturnDemeritPoints(int speed)
         {
+            var calculator = new DemeritPointsCalculator();
 
+            var points = calculator.CalculateDemeritPoints(speed);
+
+            Assert.That(points, Is.EqualTo(expectedResult));
         }
     }
 }
